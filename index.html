@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Online Examination</h2>
+
+    <div id="login">
+        <input id="student" placeholder="Student name">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="exam" style="display:none">
+        <p id="welcome"></p>
+        <p>Q1. What does HTML stand for?</p>
+
+        <label><input type="radio" name="answer" value="0">
+            Hyper Text Markup Language</label><br>
+        <label><input type="radio" name="answer" value="1">
+            High Text Machine Language</label><br>
+
+        <button onclick="submitExam()">Submit Exam</button>
+    </div>
+
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
