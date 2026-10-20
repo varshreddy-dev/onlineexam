@@ -11,6 +11,7 @@ function login() {
     document.getElementById("exam").style.display = "block";
     document.getElementById("welcome").textContent =
         "Welcome, " + name;
+        showQuestion();
 }
 
 function showQuestion() {
@@ -26,4 +27,21 @@ function showQuestion() {
             High Text Machine Language
         </label><br>
     `;
+}
+
+function submitExam() {
+    let selected = document.querySelector(
+        'input[name="answer"]:checked'
+    );
+
+    if (!selected) {
+        document.getElementById("result").textContent =
+            "Please select an answer.";
+        return;
+    }
+
+    let score = selected.value === "0" ? 1 : 0;
+
+    document.getElementById("result").textContent =
+        "Your score: " + score + " / 1";
 }
